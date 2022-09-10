@@ -1,11 +1,12 @@
 import React from 'react';
 import data from "../mock-book-data.json";
-import image from "../assets/mock-book-card-image.jpg"
+import "./BookCardStyles.css"
 export default function BookCard() {
     return (
-        <div>
+        <div className="container">
+            <img src={data.image} alt="hi" />
             <div>{data.title}</div>
-            <img src={image} alt="hi" />
+            <div>{data.author}</div>
         </div>
     )
 }
