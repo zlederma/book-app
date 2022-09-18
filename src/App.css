@@ -1,3 +1,16 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body {
-  background-color: #f5f2e4;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  background-color: #f7f5e7;
 }
