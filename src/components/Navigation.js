@@ -5,10 +5,14 @@ export default function Navigation() {
         <div class="navigation__container">
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Books</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><SearchBar /></li>
+                    <div className="navigation__pages">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Books</a></li>
+                        <li><a href="#">Profile</a></li>
+                    </div>
+                    <div className="navigation__search">
+                        <li><SearchBar /></li>
+                    </div>
                 </ul>
             </nav>
         </div>

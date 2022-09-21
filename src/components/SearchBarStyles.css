@@ -3,7 +3,7 @@
     box-shadow: 4px 4px 10px #3C740F;
     border-radius: 7px;
     display: inline-block;
-    max-width: 100%;
+    width: 100%;
 }
 
 .search-bar__search{

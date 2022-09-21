@@ -39,3 +39,12 @@
     display: inline-block;
     margin: 1rem;
 }
+
+.navigation__pages{
+    display: inline-block;
+}
+.navigation__search{
+    /* use calculation */
+    display: inline-block;
+    width: calc(90% - 300px);
+}
