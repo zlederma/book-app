@@ -4,9 +4,13 @@ import image from "../assets/mock-book-card-image.jpg"
 export default function BookCard() {
     return (
         <div className="container">
-            <img src={data.image} alt="hi" />
-            <div>{data.title}</div>
-            <div>{data.author}</div>
+            <div className="image-container">
+                <img src={data.image} alt="hi" />
+            </div>
+            <div className="details-container">
+                <div className="title">{data.title}</div>
+                <div className="author">{data.author}</div>
+            </div>
         </div>
     )
 }
