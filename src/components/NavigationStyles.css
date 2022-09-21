@@ -40,9 +40,6 @@
     margin: 1rem;
 }
 
-.navigation__pages{
-    display: inline-block;
-}
 .navigation__search{
     /* use calculation */
     display: inline-block;
