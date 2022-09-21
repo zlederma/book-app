@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.nav-container{
+    background-image: url("../assets/vines-background.jpg");
+    height: 145px;
+}
+nav {
+    background-color: rgba(255,255,255, 0.7);
+}
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -8,21 +16,22 @@ nav ul {
 nav a {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    font-size: 26px;
     text-decoration: none;
-    color: #964a14;
+    color: #000000;
 }
 
 nav a:hover{
     text-decoration-line: underline;
     text-decoration-thickness: 3px;
-    text-decoration-color: #139296;
+    text-decoration-color: #0F6874;
 }
 
 nav a:active{
-    color: #63300d;
+    color: #0F6874;
     text-decoration-line: underline;
     text-decoration-thickness: 3px;
-    text-decoration-color: #139296;
+    text-decoration-color: #0F6874;
 }
 
 nav li {
