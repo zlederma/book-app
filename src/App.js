@@ -5,7 +5,9 @@ function App() {
   return (
     <>
       <Navigation />
-      <BookCard />
+      <div className='main'>
+        <BookCard />
+      </div>
     </>
   );
 }

@@ -1,9 +1,27 @@
 .navigation__container{
     background-image: url("../assets/vines-background.jpg");
     height: 145px;
+    position: fixed;
+    top:0;
+    width: 100%;
+    /* position: fixed;
+    top: 0; */
+}
+
+.navigation__hamburger-container{
+    text-align: center;
+    background-color: rgba(255,255,255, 0.7);
+    padding: 13px;
+    display: none;
+}
+
+@media only screen and (max-width: 767px){
+    .navigation__hamburger-container{
+        display: block;
+    }
 }
 .navigation__hamburger{
-    display: none;
+    font-size: 35px;
 }
 .navigation__container nav {
     background-color: rgba(255,255,255, 0.7);
@@ -16,6 +34,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media only screen and (max-width: 767px){
+    .navigation__container nav{
+        background-color: #FFF;
+        z-index: 100;
+
+    }
+    .navigation__container nav ul{
+      flex-flow: column wrap;
+      /* display: none; */
+    }
 }
 .navigation__container nav li {
     display: inline-block;

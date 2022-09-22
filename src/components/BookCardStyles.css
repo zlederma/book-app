@@ -14,19 +14,16 @@
 
 .book-card__button-container{
     text-align: right;
-    height: 0;
-    width: 0;
+    height: 30;
+    width: 30;
     background: transparent;
-    position: relative;
-    top: -141px;
-    right: 18px;
 }
 
 @media only screen and (max-width: 767px){
     .book-card__button-container{
-        top: -102px;
-        right: 20px;
-        transform: scale(.7);
+        /* top: -102px;
+        right: 20px; */
+        /* transform: scale(.7); */
     }
 }
 .book-card__image-container{

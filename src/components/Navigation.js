@@ -4,7 +4,9 @@ import { GiHamburgerMenu } from "react-icons/gi";
 export default function Navigation() {
     return (
         <div className="navigation__container">
-            <a className="navigation__hamburger"><GiHamburgerMenu /></a>
+            <div className="navigation__hamburger-container">
+                <a className="navigation__hamburger"><GiHamburgerMenu /></a>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
