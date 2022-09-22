@@ -1,0 +1,15 @@
+.add-book-button__button{
+    background: #3C740F;
+    border-radius: 7px;
+    border: 4px solid white;
+}
+
+.add-book-button__button:hover{
+    stroke: #b5cea1;
+    background: #3C740F;
+}
+
+.add-book-button__button:active{
+    stroke: #3C740F;
+    background: #b5cea1;
+}

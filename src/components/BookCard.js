@@ -1,9 +1,10 @@
 import { data } from "../mock-book-data";
 import "./BookCardStyles.css"
-import image from "../assets/mock-book-card-image.jpg"
+import AddBookButton from "./AddBookButton";
 export default function BookCard() {
     return (
         <div className="book-card__container">
+            <AddBookButton />
             <div className="book-card__image-container">
                 <img src={data.image} alt="hi" />
             </div>
