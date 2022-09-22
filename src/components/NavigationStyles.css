@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
 .navigation__container{
     background-image: url("../assets/vines-background.jpg");
     height: 145px;
@@ -20,24 +18,21 @@
     font-size: 26px;
     text-decoration: none;
     color: #000000;
+    display: block;
+    padding: 1rem;
 }
 
 .navigation__container nav a:hover{
-    text-decoration-line: underline;
-    text-decoration-thickness: 3px;
-    text-decoration-color: #0F6874;
+    background-color:rgba(60, 116, 15, .6);
 }
 
 .navigation__container nav a:active{
-    color: #0F6874;
-    text-decoration-line: underline;
-    text-decoration-thickness: 3px;
-    text-decoration-color: #0F6874;
+    background-color: rgba(15, 104, 116, .6);
 }
 
 .navigation__container nav li {
     display: inline-block;
-    margin: 1rem;
+    margin:0;
 }
 
 .navigation__search{
