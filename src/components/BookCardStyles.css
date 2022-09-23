@@ -13,17 +13,19 @@
 }
 
 .book-card__button-container{
-    text-align: right;
-    height: 30;
-    width: 30;
-    background: transparent;
+    height: 0;
+    width: 0;
+    position:relative;
+    z-index: 1;
+    top:-290px;
+    left: 200px;
 }
 
 @media only screen and (max-width: 767px){
     .book-card__button-container{
-        /* top: -102px;
-        right: 20px; */
-        /* transform: scale(.7); */
+        top:-210px;
+        left: 132px;
+        transform: scale(.7);
     }
 }
 .book-card__image-container{
