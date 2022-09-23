@@ -18,6 +18,7 @@
     font-size: 35px;
     display: inline-block;
     margin-right: 20px;
+    margin-top: 3px;
 }
 .navigation__hamburger-search{
     display: inline-block;
@@ -72,7 +73,7 @@
 @media only screen and (max-width: 767px){
     .navigation__container nav{
         background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 30%);
-        z-index: 100;
+        box-shadow: -1px 5px 18px -5px rgba(60,116,15,0.6);
         display: none;
     }
     .navigation__container nav ul{
