@@ -1,7 +1,7 @@
 .add-book-button__button{
     background: #3C740F;
-    border-radius: 0px 7px 0px 7px;
-    border: 6px solid white;
+    border-radius: 0px 0px 0px 7px;
+    border: 2px solid white;
     width: 30px;
     height: 30px;
 }
