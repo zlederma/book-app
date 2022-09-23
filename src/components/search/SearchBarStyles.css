@@ -1,0 +1,26 @@
+.search-bar__container{
+    margin: 0;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 10px #3C740F;
+    border-radius: 7px;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+
+.search-bar__search{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-family: 'Poppins', 'sans-serif';
+    background-color: transparent;
+    margin-left: 10px;
+    transform: translateY(-2px);
+}
+
+
+
+
+
+

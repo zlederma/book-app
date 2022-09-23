@@ -1,0 +1,41 @@
+.search-result__container{
+    display: flex;
+    background-color: white;
+    height: 40px;
+    border-bottom: 1px solid #3C740F;
+
+}
+
+.search-result__title{
+    padding-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 40px;
+    max-width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.search-result__connective{
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 40px;
+    width: 30px;
+    text-align: center;
+}
+
+.search-result__author{
+    font-family: 'Bitter', serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 40px;
+    padding-top: 1px;
+    padding-right: 10px;
+    color: #1c1d1c;
+    max-width:calc(30% - 30px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

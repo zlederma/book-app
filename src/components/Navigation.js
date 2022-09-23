@@ -1,5 +1,5 @@
 import "./NavigationStyles.css";
-import SearchBar from "./SearchBar";
+import SearchBar from "./search/SearchBar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 
