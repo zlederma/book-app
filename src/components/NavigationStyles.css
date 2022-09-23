@@ -14,12 +14,21 @@
     padding-right: 20px;
     display: none;
 }
-.navigation__hamburger{
+.navigation__hamburger {
     font-size: 35px;
     display: inline-block;
     margin-right: 20px;
     margin-top: 3px;
 }
+
+.navigation__hamburger:hover{
+    color:rgb(80, 149, 23);
+}
+
+.navigation__hamburger:active{
+    color:rgba(141, 186, 105, 1)
+}
+
 .navigation__hamburger-search{
     display: inline-block;
 }
