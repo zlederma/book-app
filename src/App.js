@@ -1,12 +1,12 @@
 import './App.css';
-import BookCard from './components/BookCard';
+import BookCards from './components/BookCards';
 import Navigation from './components/Navigation';
 function App() {
   return (
     <>
       <Navigation />
       <div className='main'>
-        <BookCard />
+        <BookCards />
       </div>
     </>
   );
