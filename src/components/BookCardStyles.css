@@ -58,9 +58,9 @@
 }
 
 .book-card__details-container{
-    max-width: 243px;
+    width: 223px;
     height: 62px;
-    padding: 3px 5px;
+    padding: 3px 10px;
     background-color: #ccdfbc;
     overflow: hidden;
     border-radius: 0px 0px 7px 7px;
@@ -74,10 +74,17 @@
 }
 
 .book-card__title{
+    margin-top: 2px;
     font-family: 'Poppins', sans-serif;
     letter-spacing: -1px;
     font-size: 19px;
+    line-height: 30px;
     font-weight: 600;
+    height: 30px;
+    width: 233;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 @media only screen and (max-width: 767px){
@@ -89,7 +96,13 @@
 .book-card__author{
     font-family: 'Bitter', serif;
     font-size: 16px;
+    line-height: 16px;
     font-weight: 600;
+    height: 16px;
+    width: 233;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 @media only screen and (max-width: 767px){
