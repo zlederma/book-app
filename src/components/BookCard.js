@@ -5,7 +5,7 @@ export default function BookCard() {
     return (
         <div className="book-card__container">
             <div className="book-card__image-container">
-                <img src={data.image} aria-hiden="true" />
+                <img src={data.image} aria-hidden="true" />
             </div>
             <div className="book-card__button-container">
                 <AddBookButton />
