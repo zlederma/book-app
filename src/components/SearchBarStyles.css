@@ -18,3 +18,14 @@
     margin-left: 10px;
     transform: translateY(-2px);
 }
+
+.search-bar__result-container{
+    position: fixed;
+    display: flex;
+    margin: 10px;
+    background-color: white;
+}
+
+
+
+
