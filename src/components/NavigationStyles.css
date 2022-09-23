@@ -57,11 +57,11 @@
 }
 
 .navigation__container nav a:hover{
-    background-color:rgba(60, 116, 15, 0.6);
+    background-color:rgba(141, 186, 105, 0.7)
 }
 
 .navigation__container nav a:active{
-    background-color: rgba(15, 104, 116, 0.6);
+    background-color:rgba(60, 116, 15, 0.7);
 }
 
 .navigation__search{
