@@ -18,13 +18,13 @@
     width: 0;
     position:relative;
     z-index: 1;
-    top:-290px;
-    left: 200px;
+    top:-282px;
+    left: 201px;
 }
 
 @media only screen and (max-width: 767px){
     .book-card__button-container{
-        top:-210px;
+        top:-207px;
         left: 132px;
         transform: scale(.7);
     }
@@ -56,13 +56,13 @@
     padding: 3px 5px;
     background-color: #ccdfbc;
     overflow: hidden;
-    border-radius: 0px 7x;
+    border-radius: 0px 0px 7px 7px;
 }
 
 @media only screen and (max-width: 767px){
     .book-card__details-container{
-        width: 243px;
-        height: 60px;
+        width: 152px;
+        height: 42px;
     }
 }
 
