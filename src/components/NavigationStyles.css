@@ -4,12 +4,9 @@
     position: fixed;
     top:0;
     width: 100%;
-    /* position: fixed;
-    top: 0; */
 }
 
 .navigation__hamburger-container{
-    /* text-align: center; */
     background-color: rgba(255,255,255, 0.7);
     padding: 13px;
     padding-left: 20px;
@@ -20,7 +17,6 @@
     font-size: 35px;
     display: inline-block;
     margin-right: 20px;
-    /* padding */
 }
 .navigation__hamburger-search{
     display: inline-block;
@@ -33,7 +29,6 @@
 
 .navigation__container nav {
     background-color: rgba(255,255,255, 0.7);
-    /* display: inline-block; */
 }
 .navigation__container nav ul {
     list-style-type: none;
@@ -44,26 +39,6 @@
     align-items: center;
 }
 
-/* Styling for when the nav bar switches to a hamburger menu */
-@media only screen and (max-width: 767px){
-    .navigation__container nav{
-        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 30%);
-        z-index: 100;
-        display: none;
-    }
-    .navigation__container nav ul{
-        padding-bottom: 10px;
-        flex-flow: column wrap;
-    }
-    .navigation__container nav li{
-        text-align: left;
-        align-self: flex-start;
-        padding-left: 15px;
-    }
-    .navigation__search.navigation__search{
-        display: none;
-    }
-}
 .navigation__container nav li {
     display: inline-block;
     margin:0;
@@ -91,4 +66,27 @@
     padding-left: 20px;
     padding-right: 20px;
     width: calc(100% - 400px);
+}
+/* Styling for when the nav bar switches to a hamburger menu */
+@media only screen and (max-width: 767px){
+    .navigation__container nav{
+        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 30%);
+        z-index: 100;
+        display: none;
+    }
+    .navigation__container nav ul{
+        padding-bottom: 10px;
+        flex-flow: column wrap;
+    }
+    .navigation__container nav li{
+        text-align: left;
+        align-self: flex-start;
+        width: 100%;
+    }
+    .navigation__container nav a{
+        padding-left: 30px;
+    }
+    .navigation__search.navigation__search{
+        display: none;
+    }
 }
