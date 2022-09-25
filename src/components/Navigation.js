@@ -17,7 +17,7 @@ export default function Navigation() {
         <div className="navigation__container">
             <div className="navigation__hamburger-container" onClick={clickHandler}>
                 <a className="navigation__hamburger"><GiHamburgerMenu stroke="white" strokeWidth="10" /></a>
-                <SearchBar className="navigation__hamburger-search" />
+                <div className="navigation__hamburger-search"><SearchBar /></div>
             </div>
             <nav className="navigation__navigation" style={navDisplay}>
                 <ul>
