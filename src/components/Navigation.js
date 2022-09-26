@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function Navigation() {
     const [navDisplay, setNavDisplay] = useState({});
-    const clickHandler = () => {
+    const handleClick = () => {
         if (JSON.stringify(navDisplay) === '{}') {
             setNavDisplay({ display: "block" });
         }
@@ -15,7 +15,7 @@ export default function Navigation() {
     }
     return (
         <div className="navigation__container">
-            <div className="navigation__hamburger-container" onClick={clickHandler}>
+            <div className="navigation__hamburger-container" onClick={handleClick}>
                 <a className="navigation__hamburger"><GiHamburgerMenu stroke="white" strokeWidth="10" /></a>
                 <div className="navigation__hamburger-search"><SearchBar /></div>
             </div>
