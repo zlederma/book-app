@@ -1,13 +1,11 @@
 import './App.css';
-import BookCards from './components/BookCards';
 import Navigation from './components/Navigation';
+import Main from './components/Main';
 function App() {
   return (
     <>
       <Navigation />
-      <div className='main'>
-        <BookCards />
-      </div>
+      <Main />
     </>
   );
 }

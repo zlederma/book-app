@@ -1,9 +1,11 @@
+import { createPortal } from "react-dom"
 import "./SearchBarStyles.css"
 import SearchResults from "./SearchResults"
 import { getBooks } from "../../utils/books-fetcher"
 import { useState, useEffect } from "react"
+import BookCards from '../BookCards'
 
-export default function SearchBar() {
+export default function SearchBar(props) {
     const [results, setResults] = useState([]);
     const [closeResults, setCloseResults] = useState(false);
     const handleChange = (event) => {
@@ -12,6 +14,7 @@ export default function SearchBar() {
             getBooks(query).then(data => setResults(data));
         }
     }
+
     const handleKeyDown = (event) => {
         if (event.key === "Enter") {
             setCloseResults(true);
@@ -20,7 +23,9 @@ export default function SearchBar() {
             setCloseResults(false);
         }
     }
-    //On key down===enter is when we want to hide the searchbar and render the cards. 
+
+    useEffect(() => {
+    }, [closeResults]);
     return (
         <>
             <div className="search-bar__container">
@@ -29,6 +34,8 @@ export default function SearchBar() {
                     onKeyDown={handleKeyDown} />
             </div>
             {!closeResults ? <SearchResults results={results} /> : <></>}
+            {/* Kinda working but creates two versions because there are two search bar componenets */}
+            {/* {createPortal(<BookCards />, document.querySelector(".main__container"))} */}
         </>
     )
 }
