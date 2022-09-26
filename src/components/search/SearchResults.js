@@ -7,7 +7,6 @@ export default function SearchResults(props) {
     const [results, setResults] = useState([]);
     useEffect(() => {
         setResults(props.results);
-        console.log(props.results[0])
     }, [props.results]);
 
     const showResults = () => {
