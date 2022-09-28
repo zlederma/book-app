@@ -11,6 +11,9 @@ export default function SearchResults(props) {
 
     const showResults = () => {
         let resultsList = [];
+        if (results === undefined) {
+            return <></>;
+        }
         for (let i = 0; i < results.length; i++) {
             resultsList.push(<SearchResult result={results[i]} key={i} />)
         }
