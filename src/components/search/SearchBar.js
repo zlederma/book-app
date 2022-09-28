@@ -2,7 +2,7 @@ import { createPortal } from "react-dom"
 import "./SearchBarStyles.css"
 import SearchResults from "./SearchResults"
 import { getBooks } from "../../utils/books-fetcher"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import BookCards from '../BookCards'
 
 export default function SearchBar(props) {
@@ -23,8 +23,6 @@ export default function SearchBar(props) {
             setCloseResults(false);
         }
     }
-
-    const books = <BookCards data={results} />
 
     return (
         <>
