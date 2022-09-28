@@ -34,7 +34,6 @@ export default function SearchBar(props) {
                     onKeyDown={handleKeyDown} />
             </div>
             {!closeResults ? <SearchResults results={results} /> : <></>}
-            {/* Kinda working but creates two versions because there are two search bar componenets */}
             {closeResults ? createPortal(<BookCards data={results} />, document.querySelector(".main__container")) : <></>}
         </>
     )
