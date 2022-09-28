@@ -24,8 +24,8 @@ export default function SearchBar(props) {
         }
     }
 
-    useEffect(() => {
-    }, [closeResults]);
+    const books = <BookCards data={results} />
+
     return (
         <>
             <div className="search-bar__container">
@@ -35,7 +35,7 @@ export default function SearchBar(props) {
             </div>
             {!closeResults ? <SearchResults results={results} /> : <></>}
             {/* Kinda working but creates two versions because there are two search bar componenets */}
-            {/* {createPortal(<BookCards />, document.querySelector(".main__container"))} */}
+            {closeResults ? createPortal(<BookCards data={results} />, document.querySelector(".main__container")) : <></>}
         </>
     )
 }
