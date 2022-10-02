@@ -2,30 +2,27 @@ import "./SearchBarStyles.css"
 import SearchResults from "./SearchResults"
 import { getBooks } from "../../utils/books-fetcher"
 import { useState } from "react"
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { update } from '../../utils/bookResultsSlice'
+import { open, close } from '../../utils/resultsStateSlice'
 
+//Parent component
 export default function SearchBar(props) {
     const [results, setResults] = useState([]);
-    const [closeResults, setCloseResults] = useState(false);
-
-    const bookResults = useSelector((state) => state.bookResults.value)
     const dispatch = useDispatch()
+
     const handleChange = (event) => {
         const query = event.target.value;
         if (query.length >= 3) {
+            dispatch(open())
             getBooks(query).then(data => setResults(data));
         }
     }
 
     const handleKeyDown = (event) => {
         if (event.key === "Enter") {
-            setCloseResults(true);
+            dispatch(close())
             dispatch(update(results))
-            console.log(bookResults);
-        }
-        else {
-            setCloseResults(false);
         }
     }
 
@@ -36,7 +33,7 @@ export default function SearchBar(props) {
                     onChange={handleChange}
                     onKeyDown={handleKeyDown} />
             </div>
-            {!closeResults ? <SearchResults results={results} /> : <></>}
+            <SearchResults results={results} />
         </>
     )
 }

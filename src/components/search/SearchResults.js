@@ -2,26 +2,28 @@ import './SearchResultsStyles.css'
 import SearchResult from './SearchResult'
 import React from 'react'
 import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux'
 
 export default function SearchResults(props) {
-    const [results, setResults] = useState([]);
+    const state = useSelector((state) => state.resultsState.value)
     useEffect(() => {
-        setResults(props.results);
-    }, [props.results]);
+    }, [props.results, state]);
 
     const showResults = () => {
         let resultsList = [];
-        if (results === undefined) {
+        if (props.results === undefined) {
             return <></>;
         }
-        for (let i = 0; i < results.length; i++) {
-            resultsList.push(<SearchResult result={results[i]} key={i} />)
+        for (let i = 0; i < props.results.length; i++) {
+            resultsList.push(<SearchResult result={props.results[i]} key={i} />)
         }
         return resultsList;
     }
+
     return (
-        <div className="search-results__container">
-            {showResults()}
-        </div>
+        state ?
+            <div className="search-results__container">
+                {showResults()}
+            </div> : <></>
     )
 }
