@@ -1,5 +1,4 @@
 import './SearchResultStyles.css'
-import { results } from "../../mock-book-data"
 
 export default function SearchResult(props) {
     const result = props.result;
