@@ -1,5 +1,6 @@
 import React from 'react'
 import BookCard from './BookCard'
+import { useEffect } from 'react'
 import './BookCardsStyles.css'
 
 export default function BookCards(props) {
@@ -13,6 +14,9 @@ export default function BookCards(props) {
         }
         return bookCards;
     }
+
+    useEffect(() => {
+    }, [props.data]);
     return (
         <div className='book-cards__container'>
             {showBookCards()}
