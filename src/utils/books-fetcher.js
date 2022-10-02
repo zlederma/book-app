@@ -23,7 +23,8 @@ const cleanData = (data) => {
         let title = (data[i].volumeInfo.title !== undefined) ? data[i].volumeInfo.title : "";
         let author = (data[i].volumeInfo.authors !== undefined && data[i].volumeInfo.authors.length > 0) ? data[i].volumeInfo.authors[0] : "";
         //insert a default src
-        let image = (data[i].volumeInfo.imageLinks.thumbnail !== undefined) ? data[i].volumeInfo.imageLinks.thumbnail : defaultSrc;
+        //TODO fix bug
+        let image = (data[i].volumeInfo.imageLinks !== undefined) ? data[i].volumeInfo.imageLinks.thumbnail : defaultSrc;
 
         cleanedData.push({
             title: title,
