@@ -10,7 +10,7 @@ export default function BookCards(props) {
             return <></>;
         }
         for (let i = 0; i < props.data.length; i++) {
-            bookCards.push(<BookCard data={props.data[i]} />)
+            bookCards.push(<BookCard data={props.data[i]} key={i} />)
         }
         return bookCards;
     }
