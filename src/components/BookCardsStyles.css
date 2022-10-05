@@ -1,8 +1,8 @@
 .book-cards__container{
     padding-top: 10px;
     display: grid;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
     grid-template-columns: repeat( auto-fit, minmax(270px, 270px) );
     justify-content: center;
 }
