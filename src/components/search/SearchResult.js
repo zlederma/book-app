@@ -1,8 +1,8 @@
 import './SearchResultStyles.css'
 import { getBooks } from "../../utils/books-fetcher"
-import { useState } from "react"
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { update } from '../../utils/bookResultsSlice'
+import { close } from '../../utils/resultsStateSlice'
 
 
 export default function SearchResult(props) {
@@ -11,6 +11,7 @@ export default function SearchResult(props) {
     const query = `intitle:${result.title}+inauthor:${result.author}`;
     const handleClick = () => {
         getBooks(query).then(data => dispatch(update(data)));
+        dispatch(close());
     }
     return (
         <div className="search-result__container" onClick={() => handleClick()}>
