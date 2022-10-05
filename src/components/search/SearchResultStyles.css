@@ -3,7 +3,15 @@
     background-color: white;
     height: 40px;
     border-bottom: 1px solid #3C740F;
+    cursor: pointer;
+}
 
+.search-result__container:hover{
+    background-color: #ccdfbc;
+}
+
+.search-result__container:active{
+    background-color: #bcd6a7;
 }
 
 .search-result__title{
