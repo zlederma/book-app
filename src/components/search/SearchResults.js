@@ -17,6 +17,14 @@ export default function SearchResults(props) {
         return resultsList;
     }
 
+    //gets rid of bug where the results panel would pop up before results had been loaded
+    const hasResults = () => {
+        if (props.results != undefined && props.results.length > 0) {
+            return true;
+        }
+        return false;
+    }
+
     const ref = useRef(null);
     const { onClickOutside } = props;
     //listens for an outside click event
@@ -38,7 +46,7 @@ export default function SearchResults(props) {
 
 
     return (
-        resultsState ?
+        (resultsState && hasResults()) ?
             <div ref={ref} className="search-results__container">
                 {showResults()}
             </div> : <></>
