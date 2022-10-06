@@ -31,9 +31,10 @@ export default function SearchBar(props) {
             <div className="search-bar__container">
                 <input className="search-bar__search" type="text" placeholder="Search for a book"
                     onChange={handleChange}
-                    onKeyDown={handleKeyDown} />
+                    onKeyDown={handleKeyDown}
+                    onClick={() => dispatch(open())} />
             </div>
-            <SearchResults results={results} />
+            <SearchResults results={results} onClickOutside={() => dispatch(close())} />
         </>
     )
 }

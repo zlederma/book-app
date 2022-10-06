@@ -1,13 +1,10 @@
 import './SearchResultsStyles.css'
 import SearchResult from './SearchResult'
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux'
 
 export default function SearchResults(props) {
-    const state = useSelector((state) => state.resultsState.value)
-    useEffect(() => {
-    }, [props.results, state]);
 
     const showResults = () => {
         let resultsList = [];
@@ -20,9 +17,29 @@ export default function SearchResults(props) {
         return resultsList;
     }
 
+    const ref = useRef(null);
+    const { onClickOutside } = props;
+    //listens for an outside click event
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (ref.current && !ref.current.contains(event.target)) {
+                onClickOutside && onClickOutside();
+            }
+        };
+        document.addEventListener('click', handleClickOutside, true);
+        return () => {
+            document.removeEventListener('click', handleClickOutside, true);
+        };
+    }, [onClickOutside]);
+
+    const resultsState = useSelector((state) => state.resultsState.value)
+    useEffect(() => {
+    }, [props.results, resultsState]);
+
+
     return (
-        state ?
-            <div className="search-results__container">
+        resultsState ?
+            <div ref={ref} className="search-results__container">
                 {showResults()}
             </div> : <></>
     )
