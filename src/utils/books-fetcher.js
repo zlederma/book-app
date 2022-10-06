@@ -15,7 +15,7 @@ export const getBooks = (query) => {
             )
     )
 }
-
+//Add a function to remove duplicate books
 const cleanData = (data) => {
     data = data.items;
     let cleanedData = [];
@@ -32,5 +32,6 @@ const cleanData = (data) => {
             image: image
         })
     }
+    console.log(data);
     return cleanedData;
 }
