@@ -9,7 +9,7 @@ export default function Main() {
     return (
         <div className='main__container'>
             <BookCards data={bookResults} />
-            <BookCards data={library} />
+            <BookCards data={library} button="minus" />
         </div>
     )
 }

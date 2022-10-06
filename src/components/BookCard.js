@@ -8,7 +8,7 @@ export default function BookCard(props) {
                 <img src={props.data.image} aria-hidden="true" />
             </div>
             <div className="book-card__button-container">
-                <BookButton />
+                <BookButton button={props.button} data={props.data} />
             </div>
             <div className="book-card__details-container">
                 <div className="book-card__title">{props.data.title}</div>

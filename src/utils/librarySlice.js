@@ -8,7 +8,7 @@ export const librarySlice = createSlice({
     },
     reducers: {
         add: (state, action) => {
-            state.value = action.payload;
+            state.value.push(action.payload);
         },
         remove: (state, action) => {
             state.value = action.payload;
