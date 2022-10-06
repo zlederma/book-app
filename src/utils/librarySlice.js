@@ -11,7 +11,17 @@ export const librarySlice = createSlice({
             state.value.push(action.payload);
         },
         remove: (state, action) => {
-            state.value = action.payload;
+            const title = action.payload.title;
+            const author = action.payload.author;
+            for (let i = 0; i < state.value.length; i++) {
+                if (state.value[i].title === title) {
+                    if (state.value[i].author === author) {
+                        state.value.splice(i, 1);
+                        return
+                    }
+                }
+            }
+
         }
     },
 })
