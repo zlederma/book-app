@@ -1,7 +1,7 @@
 import defaultSrc from '../assets/default-src.png'
 export const getBooks = (query) => {
     return (
-        fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&printType=books&orderBy=relevance&maxResults=10&langRestrict=en&projection=lite`).then((response) => {
+        fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&printType=books&orderBy=relevance&maxResults=10&langRestrict=en&projection=lite&filter=partial`).then((response) => {
             if (!response.ok) {
                 throw new Error('Network response was not OK');
             }
