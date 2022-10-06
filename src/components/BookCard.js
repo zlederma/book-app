@@ -1,6 +1,6 @@
 import { data } from "../mock-book-data";
 import "./BookCardStyles.css"
-import AddBookButton from "./AddBookButton";
+import BookButton from "./BookButton";
 export default function BookCard(props) {
     return (
         <div className="book-card__container">
@@ -8,7 +8,7 @@ export default function BookCard(props) {
                 <img src={props.data.image} aria-hidden="true" />
             </div>
             <div className="book-card__button-container">
-                <AddBookButton />
+                <BookButton />
             </div>
             <div className="book-card__details-container">
                 <div className="book-card__title">{props.data.title}</div>
