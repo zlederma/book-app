@@ -15,7 +15,7 @@ export default function Navigation(props) {
         const handleClickOutside = (event) => {
             if (ref.current && !ref.current.contains(event.target)) {
                 onClickOutside && onClickOutside();
-                if (JSON.stringify(navDisplay) != '{}') {
+                if (JSON.stringify(navDisplay) !== '{}') {
                     setNavDisplay({});
                 }
             }
