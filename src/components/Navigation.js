@@ -44,8 +44,8 @@ export default function Navigation(props) {
             </div>
             <nav className="navigation__navigation" style={navDisplay}>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Books</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/library">Books</a></li>
                     <li className="navigation__search"> {size.width >= 767 ? <SearchBar /> : <></>}</li>
                     <li><a href="#">Sign out</a></li>
                 </ul>

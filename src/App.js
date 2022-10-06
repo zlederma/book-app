@@ -1,11 +1,18 @@
 import './App.css';
 import Navigation from './components/Navigation';
-import Main from './components/Main';
+import Home from './pages/Home';
+import Library from './pages/Library';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
     <>
       <Navigation onClickOutside={() => { }} />
-      <Main />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/library" element={<Library />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
