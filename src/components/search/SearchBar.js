@@ -8,11 +8,12 @@ import { open, close } from '../../utils/resultsStateSlice'
 
 //Parent component
 export default function SearchBar(props) {
+    const [query, setQuery] = useState("");
     const [results, setResults] = useState([]);
     const dispatch = useDispatch()
 
     const handleChange = (event) => {
-        const query = event.target.value;
+        setQuery(event.target.value);
         if (query.length >= 3) {
             dispatch(open())
             getBooks(query).then(data => setResults(data));
@@ -26,13 +27,19 @@ export default function SearchBar(props) {
         }
     }
 
+    const handleClick = () => {
+        if (query.length >= 3) {
+            dispatch(open())
+        }
+    }
+
     return (
         <>
             <div className="search-bar__container">
                 <input className="search-bar__search" type="text" placeholder="Search for a book"
                     onChange={handleChange}
                     onKeyDown={handleKeyDown}
-                    onClick={() => dispatch(open())} />
+                    onClick={handleClick} />
             </div>
             <SearchResults results={results} onClickOutside={() => dispatch(close())} />
         </>
