@@ -1,6 +1,6 @@
 .book-card__container{
-    width: 243px;
-    height: 350px;
+    width: 200px;
+    height: 305px;
     border-radius: 0px 0px 7px 7px;
     box-shadow: 0px 0px 5px 2px rgba(60,116,15,0.75);
     margin: auto;
@@ -8,30 +8,30 @@
 }
 
 .book-card__image-container{
-    height: 280px;
+    height: 250px;
     background-color: #ffffff;
     border-bottom: 2px solid #3C740F;
 }
 
 .book-card__image-container img{
-    width: 243px;
-    height: 280px;
+    width: 200px;
+    height: 250px;
     object-fit: cover;
 }
 
 .book-card__button-container{
     position:relative;
-    top:-278px;
-    left: 204px;
+    top:-248px;
+    left: 162px;
     z-index: 1;
     width: 0;
     height: 0;
 }
 
 .book-card__details-container{
-    width: 223px;
-    height: 62px;
-    padding: 3px 10px;
+    width: 184px;
+    height: 49px;
+    padding: 2px 8px;
     background-color: #ccdfbc;
     border-radius: 0px 0px 7px 7px;
     overflow: hidden;
@@ -39,11 +39,11 @@
 
 .book-card__title{
     font-family: 'Poppins', sans-serif;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: -1px;
-    line-height: 29px;
-    height: 29px;
+    line-height: 22px;
+    height: 22px;
     margin-top: 2px;
     overflow: hidden;
     white-space: nowrap;
@@ -52,10 +52,10 @@
 
 .book-card__author{
     font-family: 'Bitter', serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    line-height: 18px;
-    height: 18px;
+    line-height: 16px;
+    height: 16px;
     color: #1c1d1c;
     overflow: hidden;
     white-space: nowrap;
