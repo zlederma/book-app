@@ -15,23 +15,30 @@ export const getBooks = (query) => {
             )
     )
 }
-//Add a function to remove duplicate books
+
 const cleanData = (data) => {
     data = data.items;
-    let cleanedData = [];
+    let cleanedData = new Map();
     for (let i = 0; i < data.length; i++) {
         let title = (data[i].volumeInfo.title !== undefined) ? data[i].volumeInfo.title : "";
         let author = (data[i].volumeInfo.authors !== undefined && data[i].volumeInfo.authors.length > 0) ? data[i].volumeInfo.authors[0] : "";
-        //insert a default src
-        //TODO fix bug
         let image = (data[i].volumeInfo.imageLinks !== undefined) ? data[i].volumeInfo.imageLinks.thumbnail : defaultSrc;
+        let key = title + author;
 
-        cleanedData.push({
+        cleanedData.set(key, {
             title: title,
             author: author,
             image: image
         })
     }
     console.log(data);
-    return cleanedData;
+    return serializeData(cleanedData);
+}
+
+const serializeData = (data) => {
+    let serializedData = []
+    for (const value of data.values()) {
+        serializedData.push(value);
+    }
+    return serializedData;
 }
