@@ -6,7 +6,7 @@ import './BookCardsStyles.css'
 import { numBooks } from "../utils/num-books"
 
 export default function BookCards(props) {
-    const size = window.innerWidth;
+    const size = useWindowSize();
     const showBookCards = () => {
         let bookCards = [];
         if (props.data === undefined) {
@@ -14,8 +14,8 @@ export default function BookCards(props) {
         }
 
         let len = props.data.length;
-        if (props.limit) {
-            let maxBooks = numBooks(size);
+        if (props.limit !== undefined) {
+            let maxBooks = numBooks(size.width, parseInt(props.limit));
             if (maxBooks < len) {
                 len = maxBooks;
             }

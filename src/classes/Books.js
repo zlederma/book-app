@@ -2,21 +2,11 @@ import defaultSrc from '../assets/default-src.png'
 export class Books {
     constructor() {
         this.query = "";
-        this.width = 0;
         this.books = new Map();
-        this.num = 0;
     }
 
     getQuery() {
         return this.query;
-    }
-
-    getWidth() {
-        return this.width;
-    }
-
-    getNum() {
-        return this.num;
     }
 
     /**
@@ -26,24 +16,10 @@ export class Books {
         this.query = query
     }
 
-    /**
-     * @param {int} width
-     */
-    setWidth(width) {
-        this.width = width;
-    }
-
-    clear() {
-        this.query = "";
-        this.width = 0;
-        this.books = [];
-        this.num = 0;
-    }
-
     //true if successful, false otherwise
     async fetchData() {
         try {
-            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.query}&printType=books&orderBy=relevance&maxResults=30&langRestrict=en&projection=lite&filter=partial`);
+            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.query}&printType=books&orderBy=relevance&maxResults=40&langRestrict=en&projection=lite&filter=partial`);
 
             if (!response.ok) {
                 throw new Error('Network response was not OK');

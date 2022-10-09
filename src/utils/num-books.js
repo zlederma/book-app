@@ -1,4 +1,4 @@
-export function numBooks(width) {
+export function numBooks(width, min) {
     let booksPerRow = 0;
     //if smaller breakpoint
     if (width <= 767) {
@@ -15,7 +15,7 @@ export function numBooks(width) {
 
     let num = 0;
     //We want to show at least 10 books and have fully filled grid rows
-    while (num < 10) {
+    while (num < min) {
         num += booksPerRow
     }
     return num;

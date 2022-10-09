@@ -9,11 +9,11 @@ export default function Home() {
     return (
         <div className='home__container'>
             <div className='home__results'>Search Results</div>
-            <BookCards data={bookResults} limit="true" />
+            <BookCards data={bookResults} limit="15" />
             <div className='home__library'>Library</div>
             <BookCards data={library} button="minus" />
             <div className='discover__library'>Discover</div>
-            <BookCards data={discover} />
+            <BookCards data={discover} limit="10" />
         </div>
     )
 }
