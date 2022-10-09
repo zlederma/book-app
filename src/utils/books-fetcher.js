@@ -1,4 +1,5 @@
 import defaultSrc from '../assets/default-src.png'
+
 export const getBooks = (query) => {
     return (
         fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&printType=books&orderBy=relevance&maxResults=10&langRestrict=en&projection=lite&filter=partial`).then((response) => {
@@ -28,7 +29,6 @@ const cleanData = (data) => {
         //Gets rid of duplicate books that are entered with different capitalizations
         key = key.trim();
         key = key.toLowerCase();
-        console.log(key);
 
         cleanedData.set(key, {
             title: title,
@@ -36,15 +36,17 @@ const cleanData = (data) => {
             image: image
         })
     }
-    console.log(data);
+
     return serializeData(cleanedData);
 }
 
 //Helper function
 const serializeData = (data) => {
-    let serializedData = []
+    let serializedData = [];
+
     for (const value of data.values()) {
         serializedData.push(value);
     }
     return serializedData;
 }
+
