@@ -71,10 +71,6 @@ export class Books {
         return ({ title: title, author: author, image: image })
     }
 
-    calculateNums() {
-
-    }
-
     async getBooks(query) {
         this.setQuery(query);
         await this.fetchData();
