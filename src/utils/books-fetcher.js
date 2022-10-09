@@ -25,6 +25,11 @@ const cleanData = (data) => {
         let image = (data[i].volumeInfo.imageLinks !== undefined) ? data[i].volumeInfo.imageLinks.thumbnail : defaultSrc;
         let key = title + author;
 
+        //Gets rid of duplicate books that are entered with different capitalizations
+        key = key.trim();
+        key = key.toLowerCase();
+        console.log(key);
+
         cleanedData.set(key, {
             title: title,
             author: author,
@@ -35,6 +40,7 @@ const cleanData = (data) => {
     return serializeData(cleanedData);
 }
 
+//Helper function
 const serializeData = (data) => {
     let serializedData = []
     for (const value of data.values()) {
