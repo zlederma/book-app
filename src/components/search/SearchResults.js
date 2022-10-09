@@ -19,7 +19,7 @@ export default function SearchResults(props) {
 
     //gets rid of bug where the results panel would pop up before results had been loaded
     const hasResults = () => {
-        if (props.results != undefined && props.results.length > 0) {
+        if (props.results !== undefined && props.results.length > 0) {
             return true;
         }
         return false;
