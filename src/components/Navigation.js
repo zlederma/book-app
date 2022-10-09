@@ -1,6 +1,6 @@
 import "./NavigationStyles.css";
 import SearchBar from "./search/SearchBar";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu, GiOpenBook } from "react-icons/gi";
 import { useState, useEffect, useRef } from "react";
 import { useWindowSize } from "../utils/window-size";
 
@@ -44,10 +44,16 @@ export default function Navigation(props) {
             </div>
             <nav className="navigation__navigation" style={navDisplay}>
                 <ul>
-                    <li><a href="/">Home</a></li>
+                    <li>
+                        <a href="/">
+                            <div className="navigation__home" >
+                                <GiOpenBook />
+                            </div>
+                        </a>
+                    </li>
                     <li><a href="/library">Library</a></li>
                     <li className="navigation__search"> {size.width >= 767 ? <SearchBar /> : <></>}</li>
-                    <li><a href="#">Sign in</a></li>
+                    <li><a href="/authentication">Sign in</a></li>
                 </ul>
             </nav>
         </div>

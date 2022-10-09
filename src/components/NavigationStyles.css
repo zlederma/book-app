@@ -77,10 +77,21 @@
     background-color:rgba(60, 116, 15, 0.7);
 }
 
+.navigation__home{
+    display: flex;
+    align-content: center;
+}
+
+.navigation__home svg{
+    height: 39px;
+    width: 39px;
+    stroke-width: 3;
+}
+
 .navigation__search{
     padding-left: 20px;
     padding-right: 20px;
-    width: calc(100% - 400px);
+    width: calc(100% - 352px);
 }
 /* Styling for when the nav bar switches to a hamburger menu */
 @media only screen and (max-width: 767px){
