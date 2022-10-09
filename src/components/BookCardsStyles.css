@@ -5,6 +5,7 @@
     margin-right: 20px;
     grid-template-columns: repeat( auto-fill, minmax(225px, 225px) );
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 767px){
