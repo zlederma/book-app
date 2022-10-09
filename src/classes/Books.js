@@ -43,14 +43,14 @@ export class Books {
     //true if successful, false otherwise
     async fetchData() {
         try {
-            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.query}&printType=books&orderBy=relevance&maxResults=10&langRestrict=en&projection=lite&filter=partial`);
+            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.query}&printType=books&orderBy=relevance&maxResults=30&langRestrict=en&projection=lite&filter=partial`);
 
             if (!response.ok) {
                 throw new Error('Network response was not OK');
             }
 
             const data = await response.json()
-            this.add(data.items)
+            this.add(data.items);
         }
         catch (error) {
             console.error('There has been a problem with your fetch operation:', error)
