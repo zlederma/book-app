@@ -1,6 +1,6 @@
 import "./SearchBarStyles.css"
 import SearchResults from "./SearchResults"
-import { getBooks } from "../../utils/books-fetcher"
+import { Books } from "../../classes/Books"
 import { useState } from "react"
 import { useDispatch } from 'react-redux'
 import { update } from '../../utils/bookResultsSlice'
@@ -8,13 +8,17 @@ import { open, close } from '../../utils/resultsStateSlice'
 
 //Parent component
 export default function SearchBar(props) {
+    const books = new Books();
     const [results, setResults] = useState([]);
     const dispatch = useDispatch()
 
     const handleChange = (event) => {
         const query = event.target.value;
         if (query.length >= 3) {
-            getBooks(query).then(data => setResults(data)).then(dispatch(open()));
+            // let data = books.getBooks(query);
+            // setResults(data);
+            // dispatch(open());
+            books.getBooks(query).then(data => setResults(data)).then(dispatch(open()));
         }
     }
 
