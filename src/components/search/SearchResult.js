@@ -1,16 +1,18 @@
 import './SearchResultStyles.css'
-import { getBooks } from "../../utils/books-fetcher"
 import { useDispatch } from 'react-redux'
 import { update } from '../../utils/bookResultsSlice'
 import { close } from '../../utils/resultsStateSlice'
+import { Books } from "../../classes/Books"
 
 
 export default function SearchResult(props) {
+    const books = new Books();
     const dispatch = useDispatch()
     const result = props.result;
     const query = `intitle:${result.title}+inauthor:${result.author}`;
-    const handleClick = () => {
-        getBooks(query).then(data => dispatch(update(data)));
+    async function handleClick() {
+        let data = await books.getBooks(query);
+        dispatch(update(data))
         dispatch(close());
     }
     return (
