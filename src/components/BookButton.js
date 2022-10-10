@@ -3,7 +3,7 @@ import "./BookButtonStyles.css"
 import { FiPlus, FiMinus } from "react-icons/fi";
 import { useDispatch } from 'react-redux'
 import { add, remove } from '../store/librarySlice'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function BookButton(props) {
     const [button, setButton] = useState(props.button);
@@ -18,6 +18,10 @@ export default function BookButton(props) {
         dispatch(remove(props.data));
         console.log("clicked")
     }
+
+    useEffect(() => {
+        setButton(props.button);
+    }, [props.data]);
 
     if (button === "minus") {
         return (
