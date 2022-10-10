@@ -18,7 +18,7 @@ export default function Home() {
             {hasBooks(bookResults) ? <>
                 <div className='home__results'>Search Results</div>
             </> : <></>}
-            <BookCards data={bookResults} limit="15" />
+            <BookCards data={bookResults} limit="12" />
             {hasBooks(library) ? <>
                 <div className='home__library'>Library</div>
             </> : <></>}
