@@ -17,20 +17,22 @@ export class Books {
     }
 
     //true if successful, false otherwise
-    async fetchData() {
-        try {
-            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.query}&printType=books&orderBy=relevance&maxResults=25&langRestrict=en&projection=lite&filter=partial`);
-
-            if (!response.ok) {
-                throw new Error('Network response was not OK');
-            }
-
-            const data = await response.json()
-            this.add(data.items);
-        }
-        catch (error) {
-            console.error('There has been a problem with your fetch operation:', error)
-        }
+    getBooks(query) {
+        return (
+            fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&printType=books&orderBy=relevance&maxResults=10&langRestrict=en&projection=lite&filter=partial`).then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not OK');
+                }
+                return response.json()
+            })
+                .then((data) => {
+                    this.add(data);
+                    return this.serialize();
+                })
+                .catch((error) =>
+                    console.error('There has been a problem with your fetch operation:', error)
+                )
+        )
 
     }
 
@@ -71,9 +73,9 @@ export class Books {
         return ({ title: title, author: author, image: image })
     }
 
-    async getBooks(query) {
-        this.setQuery(query);
-        await this.fetchData();
-        return this.serialize();
-    }
+    // async getBooks(query) {
+    //     this.setQuery(query);
+    //     await this.fetchData();
+    //     return this.serialize();
+    // }
 }

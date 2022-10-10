@@ -12,12 +12,13 @@ export default function SearchBar(props) {
     const [results, setResults] = useState([]);
     const dispatch = useDispatch()
 
-    async function handleChange(event) {
+    const handleChange = (event) => {
         const query = event.target.value;
         if (query.length >= 3) {
-            const data = await books.getBooks(query);
-            setResults(data);
-            dispatch(open());
+            books.getBooks(query).then(data => (setResults(data))).then(dispatch(open()))
+            // const data = await books.getBooks(query);
+            // setResults(data);
+            // dispatch(open());
         }
     }
 
