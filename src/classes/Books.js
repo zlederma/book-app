@@ -19,7 +19,7 @@ export class Books {
     //true if successful, false otherwise
     async fetchData() {
         try {
-            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.query}&printType=books&orderBy=relevance&maxResults=25&langRestrict=en&projection=lite&filter=partial`);
+            const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.query}&printType=books&orderBy=relevance&maxResults=20&langRestrict=en&projection=lite&filter=partial`);
 
             if (!response.ok) {
                 throw new Error('Network response was not OK');
