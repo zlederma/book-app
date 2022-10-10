@@ -2,7 +2,7 @@ import React from 'react'
 import "./BookButtonStyles.css"
 import { FiPlus, FiMinus } from "react-icons/fi";
 import { useDispatch } from 'react-redux'
-import { add, remove } from '../utils/librarySlice'
+import { add, remove } from '../store/librarySlice'
 import { useState } from 'react';
 
 export default function BookButton(props) {

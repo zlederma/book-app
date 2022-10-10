@@ -3,8 +3,8 @@ import SearchResults from "./SearchResults"
 import { Books } from "../../classes/Books"
 import { useState } from "react"
 import { useDispatch } from 'react-redux'
-import { update } from '../../utils/bookResultsSlice'
-import { open, close } from '../../utils/resultsStateSlice'
+import { update } from '../../store/bookResultsSlice'
+import { open, close } from '../../store/resultsStateSlice'
 
 //Parent component
 export default function SearchBar(props) {

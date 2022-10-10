@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
-import bookResultsReducer from '../utils/bookResultsSlice'
-import resultsStateReducer from '../utils/resultsStateSlice'
-import libraryReducer from '../utils/librarySlice'
+import bookResultsReducer from './bookResultsSlice'
+import resultsStateReducer from './resultsStateSlice'
+import libraryReducer from './librarySlice'
 
 export default configureStore({
     reducer: {

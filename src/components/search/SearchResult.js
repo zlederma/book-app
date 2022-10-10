@@ -1,7 +1,7 @@
 import './SearchResultStyles.css'
 import { useDispatch } from 'react-redux'
-import { update } from '../../utils/bookResultsSlice'
-import { close } from '../../utils/resultsStateSlice'
+import { update } from '../../store/bookResultsSlice'
+import { close } from '../../store/resultsStateSlice'
 import { Books } from "../../classes/Books"
 
 
