@@ -23,7 +23,7 @@ export default function Home() {
                 <div className='home__library'>Library</div>
             </> : <></>}
             <BookCards data={library} button="minus" />
-            <div className='discover__library'>Discover</div>
+            <div className='home__discover'>Discover</div>
             <BookCards data={discover} limit="10" />
         </div>
     )
