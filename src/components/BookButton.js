@@ -21,7 +21,7 @@ export default function BookButton(props) {
 
     useEffect(() => {
         setButton(props.button);
-    }, [props.data]);
+    }, [props.data, props.button]);
 
     if (button === "minus") {
         return (
