@@ -16,15 +16,15 @@ export default function Home() {
     return (
         <div className='home__container'>
             {hasBooks(bookResults) ? <>
-                <div className='home__results'>Search Results</div>
+                <div className='home__results' button="plus">Search Results</div>
             </> : <></>}
-            <BookCards data={bookResults} limit="10" />
+            <BookCards data={bookResults} limit="15" />
             {hasBooks(library) ? <>
                 <div className='home__library'>Library</div>
             </> : <></>}
             <BookCards data={library} button="minus" />
             <div className='home__discover'>Discover</div>
-            <BookCards data={discover} limit="10" />
+            <BookCards data={discover} limit="10" button="plus" />
         </div>
     )
 
