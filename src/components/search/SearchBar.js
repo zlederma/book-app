@@ -10,14 +10,17 @@ import { open, close } from '../../utils/resultsStateSlice'
 export default function SearchBar(props) {
     const books = new Books();
     const [results, setResults] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
     const dispatch = useDispatch()
 
     async function handleChange(event) {
         const query = event.target.value;
         if (query.length >= 3) {
+            setIsLoading(true)
             const data = await books.getBooks(query);
             setResults(data);
             dispatch(open());
+            setIsLoading(false)
         }
     }
 
@@ -35,7 +38,7 @@ export default function SearchBar(props) {
                     onChange={handleChange}
                     onKeyDown={handleKeyDown} />
             </div>
-            <SearchResults results={results} onClickOutside={() => dispatch(close())} />
+            {!isLoading ? <SearchResults results={results} onClickOutside={() => dispatch(close())} /> : <></>}
         </>
     )
 }
