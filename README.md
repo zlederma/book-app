@@ -5,4 +5,5 @@ Book App is a frontend focused project done in JavaScript React that utilizes th
 ## Links
 
 [Application](https://illustrious-phoenix-4944a0.netlify.app)
+
 [Case Study](https://www.zoelederman.com/projects/book-app)
