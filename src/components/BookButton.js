@@ -16,7 +16,6 @@ export default function BookButton(props) {
     const minusClickHandler = () => {
         setButton("plus")
         dispatch(remove(props.data));
-        console.log("clicked")
     }
 
     useEffect(() => {
